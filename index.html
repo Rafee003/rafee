@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mohammed Rafee-Ur-Rahman Chowdhury (Rafee) — Patching & Remedial</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a class="brand" href="#">Mohammed Rafee-Ur-Rahman Chowdhury (Rafee)</a>
+            <nav class="nav">
+                <div class="links">
+                    <a href="#services">Services</a>
+                    <a href="#about">About</a>
+                    <a href="#contact" class="cta">Contact</a>
+                </div>
+            </nav>
+            <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-left">
+                    <h1>Professional Patching & Remedial Specialist</h1>
+                    <p class="lead">Fast, reliable concrete and wall repairs across Wollongong, Illawarra and Sydney.
+                    </p>
+                    <div class="actions">
+                        <a href="#contact" class="btn primary">Get a Quote</a>
+                        <a href="#services" class="btn ghost">View Services</a>
+                    </div>
+                    <ul class="quick-stats">
+                        <li><strong>3 yrs</strong><span>Experience</span></li>
+                        <li><strong>Own</strong><span>Tools</span></li>
+                        <li><strong>Wollongong</strong><span>Based</span></li>
+                    </ul>
+                </div>
+                <aside class="hero-right">
+                    <div class="card">
+                        <h3>About Me</h3>
+                        <p>I'm Mohammed Rafee-Ur-Rahman Chowdhury (Rafee) — an experienced patching and remedial
+                            subcontractor
+                            working on
+                            residential and commercial projects. I deliver clean, efficient results and offer flexible
+                            engagement
+                            options.</p>
+                        <img src="images/rafee-image-2.jpeg" alt="Mohammed Rafee-Ur-Rahman" class="hero-image"
+                            loading="lazy">
+                        <a href="#contact" class="btn outline">Request Quote</a>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section id="services" class="section">
+            <div class="container">
+                <h2>Services</h2>
+                <div class="services-grid">
+                    <div class="service">Concrete Patching</div>
+                    <div class="service">Wall Patching</div>
+                    <div class="service">Surface Preparation</div>
+                    <div class="service">Concrete Grinding</div>
+                    <div class="service">Defect Rectification</div>
+                    <div class="service">Jackhammering & Demolition Prep</div>
+                    <div class="service">General Remedial Works</div>
+                    <div class="service">Material Handling</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section light">
+            <div class="container about-grid">
+                <div>
+                    <h2>About</h2>
+                    <p>Experienced in commercial and residential projects across Sydney and the Illawarra. Certified
+                        with White
+                        Card and safety training, I prioritise on-site safety and efficient, high-quality finish work.
+                    </p>
+                    <h3>Why choose me</h3>
+                    <ul class="features">
+                        <li>3+ years hands-on experience</li>
+                        <li>Own professional tools & equipment</li>
+                        <li>Available for subcontract or one-off repairs</li>
+                        <li>Safety trained (White / Yellow Card)</li>
+                    </ul>
+                </div>
+                <aside class="about-aside">
+                    <h3>Availability</h3>
+                    <ul>
+                        <li>Small repairs</li>
+                        <li>Residential & commercial</li>
+                        <li>Ongoing subcontract work</li>
+                        <li>Hourly or fixed-price</li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container contact-grid">
+                <div>
+                    <h2>Contact</h2>
+                    <p>For quotes, availability or general enquiries, send a message or email directly.</p>
+                    <p><strong>Email:</strong> rafeerahman104024@gmail.com</p>
+                </div>
+                <form id="contactForm" class="contact-form" onsubmit="return handleContact(event)">
+                    <label><span>Name</span><input type="text" id="name" placeholder="Your name" required></label>
+                    <label><span>Email</span><input type="email" id="email" placeholder="you@example.com"
+                            required></label>
+                    <label><span>Message</span><textarea id="message" rows="5" placeholder="Project details..."
+                            required></textarea></label>
+                    <div class="form-actions">
+                        <button type="submit" class="btn primary">Send Request</button>
+                        <a href="mailto:rafeerahman104024@gmail.com?subject=Quote%20Request" class="btn ghost">Email
+                            Directly</a>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div>© <span id="year"></span> Mohammed Rafee-Ur-Rahman Chowdhury (Rafee)</div>
+            <div class="footer-links">Made with care · Free quotes available</div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
