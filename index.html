@@ -11,12 +11,16 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@300;400;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
 </head>
 
 <body>
     <header class="header">
         <div class="container header-inner">
-            <a class="brand" href="#">Mohammed Rafee Ur Rahman Chowdhury (Rafee)</a>
+            <a class="brand" href="#">
+                <span class="brand-full">Mohammed Rafee Ur Rahman Chowdhury (Rafee)</span>
+                <span class="brand-short">Rafee</span>
+            </a>
             <nav class="nav">
                 <div class="links">
                     <a href="#services">Services</a>
@@ -78,6 +82,17 @@
             </div>
         </section>
 
+        <section id="gallery" class="section">
+            <div class="container">
+                <h2>Gallery</h2>
+                <p class="gallery-intro">Before and after photos of patching, grinding and jackhammering work across
+                    Wollongong, Illawarra and Sydney.</p>
+                <div id="galleryGrid" class="gallery-grid" aria-label="Project gallery">
+                    <!-- thumbnails built by script.js -->
+                </div>
+            </div>
+        </section>
+
         <section id="about" class="section light">
             <div class="container about-grid">
                 <div>
@@ -113,12 +128,22 @@
                     <p>For quotes, availability or general enquiries, send a message or email directly.</p>
                     <p><strong>Email:</strong> rafeerahman104024@gmail.com</p>
                 </div>
-                <form id="contactForm" class="contact-form" onsubmit="return handleContact(event)">
-                    <label><span>Name</span><input type="text" id="name" placeholder="Your name" required></label>
-                    <label><span>Email</span><input type="email" id="email" placeholder="you@example.com"
+                <form id="contactForm" class="contact-form" onsubmit="return handleContact(event)"
+                    action="https://formsubmit.co/rafeerahman104024@gmail.com" method="POST"
+                    enctype="multipart/form-data">
+                    <input type="hidden" name="_subject" value="New quote request from website">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+                    <label><span>Name</span><input type="text" id="name" name="name" placeholder="Your name"
                             required></label>
-                    <label><span>Message</span><textarea id="message" rows="5" placeholder="Project details..."
-                            required></textarea></label>
+                    <label><span>Email</span><input type="email" id="email" name="email" placeholder="you@example.com"
+                            required></label>
+                    <label><span>Message</span><textarea id="message" name="message" rows="5"
+                            placeholder="Project details..." required></textarea></label>
+                    <label><span>Attachment (max 10MB)</span><input type="file" id="attachment" name="attachment"
+                            accept=".jpg,.jpeg,.png,.gif,.pdf,.doc,.docx,.xls,.xlsx,.txt,.csv,.zip"></label>
+                    <div id="formStatus" class="form-status" aria-live="polite"></div>
                     <div class="form-actions">
                         <button type="submit" class="btn primary">Send Request</button>
                         <a href="mailto:rafeerahman104024@gmail.com?subject=Quote%20Request" class="btn ghost">Email
@@ -137,6 +162,7 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
     <script src="script.js"></script>
 </body>
 
