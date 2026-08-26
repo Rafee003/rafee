@@ -48,7 +48,8 @@ function handleContact(e) {
 
 	const attachedFile = attachmentInput && attachmentInput.files[0];
 	if (attachedFile && attachedFile.size > MAX_ATTACHMENT_BYTES) {
-		statusEl.textContent = "Attachment is too large. Please keep it under 10MB.";
+		statusEl.textContent =
+			"Attachment is too large. Please keep it under 10MB.";
 		statusEl.className = "form-status error";
 		statusEl.style.display = "flex";
 		return false;
@@ -84,7 +85,8 @@ function handleContact(e) {
 					if (nameEl) nameEl.textContent = "No file chosen";
 				}
 			} else {
-				statusEl.textContent = "Something went wrong. Please try again.";
+				statusEl.textContent =
+					"Something went wrong. Please try again.";
 				statusEl.className = "form-status error";
 			}
 		})
@@ -126,38 +128,41 @@ if (navToggle && nav) {
 // Source images live in images/gallery/. Captions are derived from filenames,
 // with non-descriptive "WhatsApp Image" shots falling back to a generic label.
 const galleryFiles = [
+	"Skimming.jpeg",
+	// Patching
+	"Round Patching.jpeg",
+	"Patching 5.jpeg",
+	"Patching 6.jpeg",
+	"Patching Preparation- Grinding.jpeg",
+	"Patching 3.jpeg",
+	"Patching.jpeg",
+	"Patching 2.jpeg",
+	"Patching Preparation-Grinding (Before Patching).jpeg",
+	"Patching Preparation- Grinding 2(Before Patching).jpeg",
+	"Patching Preparation- (After Patching).jpeg",
+	"Patching Preparation.jpeg",
+	"Before Patching.jpeg",
+	"After Patching.jpeg",
+	"Patching Preparation - Grinding (Before).jpeg",
+	"Patching Preparation - Grinding (After).jpeg",
+	"Patching Preparation - Grinding (Before) 2.jpeg",
+	"Patching Preparation - Grinding (After) 2.jpeg",
+
+	// Grinding
+	"Before Floor Grinding.jpeg",
+	"After Floor Grinding.jpeg",
+	"Floor Grinding.jpeg",
+	"Floor Grinding 2.jpeg",
+	"Before Grinding.jpeg",
+	"After Grinding.jpeg",
+
 	// Demolition / Jackhammering
-	"Jackhammering.jpeg",
-	"Chipping - Jackhammering.jpeg",
-	"Chipping - Jackhammering 2.jpeg",
-	"Chipping - Jackhammering 3.jpeg",
-	"Pan Jackhammering.jpeg",
-	"Pan Clearing (Jackhammering).jpeg",
+	"Chipping.jpeg",
+	"Level Alteration - Jackhammering.jpeg",
 	"Level alteration (Cutting & Jckhammering).jpeg",
 	"Alteration of extended portion (Cutting-Jackhammering-Grinding).jpeg",
 	"Plumbing Relocation (Cutting and Jackhammering).jpeg",
-	// Grinding
-	"before grinding.jpeg",
-	"After grinding.jpeg",
-	"Floor Grinding.jpeg",
-	"Floor Grinding 2.jpeg",
-	"Before Floor Grinding.jpeg",
-	"After Floor Grinding.jpeg",
-	"grinding.jpeg",
-	"Patching Preparation- Grinding.jpeg",
-	"Patching Preparation-Grinding (before patching).jpeg",
-	// Patching
-	"before patching.jpeg",
-	"after patching.jpeg",
-	"Patching.jpeg",
-	"Patching 2.jpeg",
-	"Patching 3.jpeg",
-	"Patching 4.jpeg",
-	"Patching 5.jpeg",
-	"Patching 6.jpeg",
-	"Patching 7.jpeg",
-	// Finishing
-	"Skimming.jpeg",
+	"Pan Clearing (Jackhammering).jpeg",
 ];
 
 function galleryCaption(file) {
